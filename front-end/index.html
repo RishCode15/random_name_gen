@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gujarati Random Name Generator</title>
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="./styles.css?v=3" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <header class="header">
+          <h1>Gujarati Random Name Generator</h1>
+          <p>Enter how many names you want, then hit Generate.</p>
+        </header>
+
+        <section class="controls">
+          <label class="field">
+            <span class="label">Count</span>
+            <input id="count" type="number" inputmode="numeric" min="1" max="5000" value="10" />
+          </label>
+
+          <button id="generate" class="primary" type="button">Generate</button>
+          <button id="copy" class="secondary" type="button" disabled>Copy all</button>
+        </section>
+
+        <p id="error" class="error" role="alert" aria-live="polite"></p>
+
+        <section class="results">
+          <div class="resultsHeader">
+            <h2>Generated Names</h2>
+            <span id="meta" class="meta"></span>
+          </div>
+          <ol id="list" class="list"></ol>
+        </section>
+      </section>
+      <footer class="footer">
+        <span>Tip: press Enter while focused in the Count box.</span>
+      </footer>
+    </main>
+
+    <script>
+      // Set this ONLY when hosting the front-end separately from the back-end.
+      // Example:
+      //   window.API_BASE = "https://your-service.onrender.com";
+      // For local dev (C++ server serves both UI + API), keep it empty:
+      window.API_BASE = "https://random-name-gen.onrender.com";
+    </script>
+    <script src="./app.js?v=3"></script>
+  </body>
+</html>

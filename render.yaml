@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: randomnamegenerator-api
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+
